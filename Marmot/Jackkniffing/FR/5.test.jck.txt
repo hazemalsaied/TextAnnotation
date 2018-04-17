@@ -626,7 +626,7 @@ Victor
 On
 compte
 environ
-46_000
+46 000
 km
 de
 haies
@@ -4089,7 +4089,7 @@ districts
 administratifs
 comprenant
 théoriquement
-10_000
+10 000
 familles
 .
 
@@ -5844,7 +5844,8 @@ autres
 termes
 ,
 les
-x_k
+x
+k
 valeurs
 sont
 calculées
@@ -7223,7 +7224,7 @@ l'
 
 Près
 de
-4_000
+4 000
 soldats
 français
 sont
@@ -9347,7 +9348,7 @@ démontré
 que
 plus
 de
-200_000
+200 000
 voyageurs
 ont
 emprunté
@@ -16436,7 +16437,7 @@ population
 s'
 élève
 à
-5_445
+5 445
 habitants
 .
 
@@ -17993,7 +17994,7 @@ année
 ,
 est
 de
-22_300
+22 300
 NZ
 $
 ,
@@ -20457,7 +20458,7 @@ fin
 le
 contrat
 de
-5_000_000
+5 000 000
 $
 .
 
@@ -21221,7 +21222,8 @@ sauts
 par
 an
 ,
-Skydive_Empuriabrava
+Skydive
+Empuriabrava
 se
 classe
 parmi
@@ -22074,7 +22076,7 @@ une
 capacité
 initiale
 de
-10_000
+10 000
 spectateurs
 .
 
@@ -27943,10 +27945,10 @@ développent
 alors
 plus
 de
-1_100
+1 100
 chevaux
 ,
-1_400
+1 400
 ch
 avec
 turbo
@@ -34621,66 +34623,6 @@ en
 exil
 .
 
-La
-loi
-de
-Friedel
-dit
-que
-la
-classe
-de
-Laue
-d'
-un
-cristal
-est
-toujours
-centrosymétrique
-(
-c'est-à-dire
-qu'
-elle
-possède
-l'
-inversion
-comme
-élément
-de
-groupe
-)
-,
-même
-si
-le
-groupe
-d'
-espace
-de
-le
-cristal
-n'
-est
-pas
-centrosymétrique
-:
-les
-intensités
-de
-les
-réflexions
-hkl
-et
--
-h
--
-k
--
-l
-sont
-égales
-.
-
 En
 revanche
 ,
@@ -35268,7 +35210,7 @@ Manaro
 ,
 haut
 de
-1_496
+1 496
 m
 ,
 est
@@ -37368,7 +37310,7 @@ population
 était
 estimée
 à
-170_055
+170 055
 habitants
 en
 2006
@@ -37623,7 +37565,7 @@ Compagnie
 de
 Liévin
 de
-1_237_500
+1 237 500
 francs
 ,
 importance
@@ -43316,7 +43258,7 @@ est
 issu
 de
 le
-104
+104e
 régiment
 d'
 infanterie
@@ -45626,4 +45568,34 @@ après
 et
 1999
 )
+.
+
+À
+l'
+issue
+de
+celle-ci
+,
+trois
+équipes
+sont
+qualifiées
+directement
+alors
+qu'
+une
+autre
+doit
+affronter
+une
+équipe
+de
+la
+zone
+Asie
+pour
+obtenir
+une
+place
+supplémentaire
 .

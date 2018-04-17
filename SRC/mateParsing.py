@@ -77,12 +77,12 @@ def conllu2009Toconllu(conllu2009Path, Conll2016Path):
 
 
 def jackknife(foldNum, langName):
-    corpusPath = '/Users/halsaied/Documents/IdenSys/sharedTask/'+ langName+ '/train.conllu.autoPOS.conllu2009'
+    corpusPath = '/Users/halsaied/PycharmProjects/TextAnnotation/sharedTask/' + langName + '/train.conllu.autoPOS.conllu2009'
     with open(corpusPath) as corpusFile:
         lines = corpusFile.readlines()
         foldSize = len(lines) / foldNum
 
-        ResultPath = '/Users/halsaied/Documents/IdenSys/MateTools/'+langName + '/Jackkniffing/'
+        ResultPath = '/Users/halsaied/PycharmProjects/TextAnnotation/Mate/' + langName + '/Jackkniffing/'
         for i in xrange(0, foldNum):
 
             trainPath = os.path.join(ResultPath, str(i) + '.train.jck.txt')
@@ -104,6 +104,7 @@ def jackknife(foldNum, langName):
             createMateFile(trainLines, trainPath)
             createMateFile(testLines, testPath)
 
+
 def createMateFile(lines, path):
     trainCorpus = ''
     for line in lines:
@@ -112,10 +113,11 @@ def createMateFile(lines, path):
     marmotTrainFile = open(path, 'w+')
     marmotTrainFile.write(trainCorpus)
 
+
 def createMateBatchJCK(foldNum, langList):
     batch = '#!/bin/bash\n'
-    outPutPath = '/Users/halsaied/Documents/IdenSys/MateTools/srl/lib/'
-    jackPath = '/Users/halsaied/Documents/IdenSys/MateTools/HU/Jackkniffing/'
+    outPutPath = '/Users/halsaied/PycharmProjects/TextAnnotation/Mate/srl/lib/'
+    jackPath = '/Users/halsaied/PycharmProjects/TextAnnotation/Mate/HU/Jackkniffing/'
     for lang in langList.split(','):
         for f in xrange(0, foldNum):
             trainFile = os.path.join(jackPath, str(f) + '.train.jck.txt')
@@ -123,30 +125,31 @@ def createMateBatchJCK(foldNum, langList):
             batch += 'java -cp anna-3.3.jar is2.parser.Parser -train ' + trainFile + ' -model ' + modelFile + '\n'
             testFile = os.path.join(jackPath, str(f) + '.test.jck.txt')
             outputFile = os.path.join(jackPath, str(f) + '.output.jck.txt')
-            batch += 'java -cp anna-3.3.jar is2.parser.Parser -model ' + modelFile + ' -test '+ testFile +' -out '  + outputFile + '\n'
+            batch += 'java -cp anna-3.3.jar is2.parser.Parser -model ' + modelFile + ' -test ' + testFile + ' -out ' + outputFile + '\n'
 
     batchFile = open(outPutPath + 'dep.jck.batch.sh', 'w+')
     batchFile.write(batch)
 
 
-def mergeConlluFiles(outfilesPath,outputFileName):
-        lines = ''
-        for subdir, dirs, files in os.walk(outfilesPath):
-            for file in files:
-                with open(os.path.join(outfilesPath, file)) as conlluFile:
-                    jckOutLines = conlluFile.readlines()
-                    jckOutLines = marmot.removeFinalEmptyLines(jckOutLines)
-                    for line in jckOutLines:
-                        lines += line
-        outFile = open(os.path.join(outfilesPath, outputFileName), 'w')
-        outFile.write(lines)
+def mergeConlluFiles(outfilesPath, outputFileName):
+    lines = ''
+    for subdir, dirs, files in os.walk(outfilesPath):
+        for file in files:
+            with open(os.path.join(outfilesPath, file)) as conlluFile:
+                jckOutLines = conlluFile.readlines()
+                jckOutLines = marmot.removeFinalEmptyLines(jckOutLines)
+                for line in jckOutLines:
+                    lines += line
+    outFile = open(os.path.join(outfilesPath, outputFileName), 'w')
+    outFile.write(lines)
 
-#ConlluToConll2009('/Users/halsaied/Documents/IdenSys/sharedtask/HU/train.conllu.autoPOS')
-#jackknife(10, 'HU')
-#createMateBatchJCK(10, 'HU')
-#conllu2009Toconllu('/Users/halsaied/Documents/IdenSys/sharedtask/HU/train.conllu.autoPOS.conllu2009', '/Users/halsaied/Documents/IdenSys/sharedtask/HU/train.conllu.autoPOS')
-#ConlluToConll2009('/Users/halsaied/Documents/IdenSys/sharedtask/HU/test.conllu.autoPOS')
 
-#mergeConlluFiles('/Users/halsaied/Documents/IdenSys/mateTools/SPMRL/','spmrl.conllu')
-ConlluToConll2009('/Users/halsaied/Documents/IdenSys/sharedtask/FR/train.conllu')
-ConlluToConll2009('/Users/halsaied/Documents/IdenSys/sharedtask/FR/test.conllu')
+# ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu.autoPOS')
+# jackknife(10, 'HU')
+# createMateBatchJCK(10, 'HU')
+# conllu2009Toconllu('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu.autoPOS.conllu2009', '/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu.autoPOS')
+# ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/test.conllu.autoPOS')
+
+# mergeConlluFiles('/Users/halsaied/PycharmProjects/TextAnnotation/mateTools/SPMRL/','spmrl.conllu')
+ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/train.conllu')
+ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/test.conllu')

@@ -947,7 +947,7 @@ en
 Allemagne
 .
 
---
+-
 Mais
 ma
 chérie
@@ -2762,7 +2762,7 @@ novembre
 2007
 plus
 de
-8_000
+8 000
 applications
 ,
 développées
@@ -2835,7 +2835,7 @@ en
 2007
 est
 de
-11_839
+11 839
 habitants
 .
 
@@ -8388,7 +8388,8 @@ qualité
 est
 à
 le
-rendez_vous
+rendez
+vous
 .
 
 Il
@@ -8784,7 +8785,7 @@ montant
 que
 jusqu'
 à
-50_000
+50 000
 yens
 .
 
@@ -9671,7 +9672,7 @@ sur
 une
 distance
 de
-6_200
+6 200
 km
 ,
 réalisant
@@ -13049,7 +13050,7 @@ les
 estimations
 allant
 de
-87_000
+87 000
 (
 ce
 qui
@@ -13084,7 +13085,7 @@ naturalisations
 à
 plus
 de
-400_000
+400 000
 (
 Forces
 libanaises
@@ -14727,7 +14728,7 @@ Atlantique
 )
 comptent
 environ
-16_000
+16 000
 espèces
 différentes
 .
@@ -17140,7 +17141,7 @@ attribuent
 la
 perte
 de
-2_278
+2 278
 de
 leurs
 bombardiers
@@ -17153,7 +17154,7 @@ contre
 «
 seulement
 »
-1_345
+1 345
 de
 le
 fait
@@ -17166,7 +17167,7 @@ antiaérienne
 ils
 reconnaissent
 que
-8_848
+8 848
 autres
 appareils
 ont
@@ -17177,7 +17178,7 @@ la
 Flak
 ,
 contre
-1_728
+1 728
 par
 la
 chasse
@@ -20631,7 +20632,7 @@ Qatar
 une
 presqu'île
 de
-11_437
+11 437
 km²
 situé
 sur
@@ -20759,7 +20760,7 @@ d'
 hydrophones
 distantes
 de
-2_000
+2 000
 km
 dans
 le
@@ -21537,7 +21538,7 @@ atteignit
 un
 sommet
 de
-300_000
+300 000
 (
 avec
 le
@@ -21545,7 +21546,7 @@ statut
 de
 domaine
 de
-350_000
+350 000
 koku
 )
 et
@@ -21560,7 +21561,7 @@ en
 il
 était
 de
-200_000
+200 000
 koku
 .
 
@@ -27526,7 +27527,7 @@ On
 considère
 qu'
 environ
-50_000
+50 000
 Allemands
 de
 le
@@ -29438,10 +29439,10 @@ Pâques
 par
 plus
 de
-60_000
+60 000
 voix
 sur
-75_000
+75 000
 suffrages
 ,
 «
@@ -33073,7 +33074,7 @@ un
 bassin
 versant
 de
-3_824
+3 824
 km2
 .
 
@@ -34058,7 +34059,7 @@ s'
 élève
 à
 environ
-1_500_000
+1 500 000
 francs
 a
 été
@@ -40371,7 +40372,7 @@ groupe
 communes
 et
 compte
-11_506
+11 506
 habitants
 (
 recensement
@@ -41380,7 +41381,7 @@ le
 nombre
 record
 de
-30_335
+30 335
 spectateurs
 sont
 présents
@@ -42153,7 +42154,7 @@ ne
 pouvait
 compter
 que
-80_000
+80 000
 hommes
 .
 
@@ -45088,7 +45089,7 @@ et
 musclée
 .
 
-George-Évariste
+Georges-Évariste
 Colombel
 ,
 né

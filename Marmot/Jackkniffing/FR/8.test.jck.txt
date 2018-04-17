@@ -3088,7 +3088,7 @@ demandait
 une
 réparation
 de
-150_000
+150 000
 $
 et
 un
@@ -3354,7 +3354,7 @@ subtilisée
 est
 évaluée
 à
-2_500
+2 500
 $
 .
 
@@ -4918,7 +4918,7 @@ débuté
 le
 2
 mars
-2103
+2013
 par
 la
 diffusion
@@ -5216,7 +5216,7 @@ le
 district
 était
 de
-1_444_861
+1 444 861
 habitants
 en
 1999
@@ -6912,7 +6912,9 @@ l'
 est
 le
 mont
+Rantemario
 avec
+3 478
 mètres
 d'
 altitude
@@ -10090,7 +10092,7 @@ véritable
 idole
 .
 
---
+-
 Mais
 je
 reviens
@@ -10329,7 +10331,7 @@ une
 altitude
 moyenne
 de
-1115,45
+115,45
 m
 au-dessus
 de
@@ -11425,7 +11427,7 @@ déjà
 accueilli
 plus
 de
-1_400
+1 400
 jeunes
 stagiaires
 de
@@ -13891,7 +13893,7 @@ suivante
 criticusleblog@gmail.com
 .
 
---
+-
 La
 ville
 rationalise
@@ -24449,7 +24451,7 @@ communes
 de
 moins
 de
-10_000
+10 000
 habitants
 ,
 les
@@ -25486,7 +25488,7 @@ de
 les
 Francs
 Clovis
-I
+Ier
 et
 en
 sa
@@ -25892,7 +25894,7 @@ progression
 démographique
 ,
 atteignant
-20_000
+20 000
 habitants
 à
 le
@@ -28360,7 +28362,7 @@ Saint-Hubert
 laissant
 s'
 échapper
-19_000
+19 000
 L
 de
 carburant
@@ -31568,7 +31570,7 @@ est
 approximativement
 égal
 à
-1,186_569_110
+1,186 569 110
 .
 
 Auguste
@@ -33115,11 +33117,13 @@ Malgré
 ce
 handicap
 ,
-Aide-toi
+Aide
+-toi
 ,
 le
 ciel
-t'aidera
+t'
+aidera
 ,
 premier
 épisode
@@ -34535,7 +34539,7 @@ la
 commune
 était
 de
-1_890
+1 890
 .
 
 Le
@@ -36307,11 +36311,11 @@ En
 ,
 il
 compte
-26989
+26 989
 habitants
 ,
 dont
-13_641
+13 641
 à
 Gołdap
 .
@@ -36868,7 +36872,7 @@ pour
 un
 montant
 de
-1_200
+1 200
 €
 un
 bateau
@@ -37671,7 +37675,7 @@ français
 ,
 plus
 de
-300_000
+300 000
 hommes
 .
 
@@ -42700,7 +42704,7 @@ Cela
 représente
 plus
 de
-400_000
+400 000
 personnes
 .
 
@@ -43775,7 +43779,7 @@ un
 point
 culminant
 à
-2_001
+2 001
 mètres
 et
 une
@@ -45569,4 +45573,23 @@ bière
 y
 est
 bonne
+.
+
+Vers
+731
+,
+le
+moine
+et
+chroniqueur
+northumbrien
+Bède
+rédige
+son
+Histoire
+ecclésiastique
+de
+le
+peuple
+anglais
 .

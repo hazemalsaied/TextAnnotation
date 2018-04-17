@@ -1,0 +1,3 @@
+#!/bin/bash
+java -Xmx5G -cp marmot.jar marmot.morph.cmd.Trainer -train-file form-index=1,tag-index=2,/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Train/train.conllu.marmot.train.fr -tag-morph false -model-file /Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Models/model.marmot.fr
+java -cp marmot.jar marmot.morph.cmd.Annotator --model-file /Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Models/model.marmot.fr --test-file form-index=0,/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Input/test.marmot.fr --pred-file /Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Output/test.output.fr

@@ -1,81 +1,4 @@
 
-Lors
-d'
-une
-razzia
-en
-territoire
-polonais
-,
-Fetih
-Giray
-se
-voit
-attribuer
-dans
-sa
-part
-de
-butin
-une
-noble
-capturée
-que
-Joseph
-von
-Hammer-Purgstall
-identifie
-avec
-une
-comtesse
-«
-Maria
-Potocka
-»
-.
-
-Chaque
-épreuve
-donne
-lieu
-à
-des
-points
-attribués
-en
-fonction
-de
-les
-performances
-:
-4
-points
-pour
-le
-premier
-,
-2
-points
-pour
-le
-deuxième
-et
-1
-point
-pour
-le
-troisième
-,
-les
-points
-étant
-doublés
-lors
-de
-la
-finale
-.
-
 Cela
 montre
 en
@@ -2042,7 +1965,7 @@ sauvé
 la
 vie
 de
-700_000
+700 000
 malades
 pour
 l'
@@ -2500,7 +2423,7 @@ a
 permis
 de
 parcourir
-6_732
+6 732
 km
 en
 43,02
@@ -4341,6 +4264,7 @@ Dhāl
 (
 en
 arabe
+ذال
 ,
 dhāl
 ou
@@ -4348,10 +4272,11 @@ ou
 ,
 ou
 simplement
+ذ
 )
 est
 la
-9
+9e
 lettre
 de
 l'
@@ -8757,7 +8682,7 @@ franchir
 une
 distance
 de
-1_000
+1 000
 km
 en
 vol
@@ -10226,7 +10151,7 @@ s
 puis
 1
 min
-31
+30
 s
 761
 .
@@ -11739,7 +11664,7 @@ Alpes
 pennines
 situé
 à
-2_469
+2 469
 mètres
 d'
 altitude
@@ -20234,12 +20159,12 @@ statistique
 navrant
 :
 sur
-150_000
+150 000
 collégiens
 qui
 décrochent
 ,
-100_000
+100 000
 sont
 des
 garçons
@@ -20462,10 +20387,10 @@ pendant
 2
 ans
 (
-1
+1er
 échelon
 puis
-2
+2e
 échelon
 )
 .
@@ -20833,6 +20758,8 @@ Parmi
 ces
 espèces
 ,
+Bius
+thoracicus
 était
 le
 symbole
@@ -23039,7 +22966,11 @@ art.
 24
 ,
 v.
-cep
+cep.
+art
+30
+infra
+)
 .
 
 Elle
@@ -24235,7 +24166,12 @@ le
 XLVII
 .
 
--1049
+Otton
+II
+de
+Mâcon
+(
+?-1049
 )
 fut
 comte
@@ -31552,7 +31488,7 @@ la
 souris
 comporte
 environ
-1_300
+1 300
 gènes
 codant
 pour
@@ -32404,7 +32340,7 @@ sur
 une
 superficie
 de
-1_068
+1 068
 km²
 .
 
@@ -32506,7 +32442,7 @@ le
 flux
 migratoire
 (
-5_000
+5 000
 quidams
 en
 une
@@ -34319,7 +34255,7 @@ d'
 une
 longueur
 de
-1_200
+1 200
 mètres
 s'
 étend
@@ -35490,6 +35426,20 @@ lieu
 les
 2
 et
+3
+août
+1796
+près
+de
+Lonato
+,
+à
+le
+nord
+de
+l'
+Italie
+,
 pendant
 les
 guerres
@@ -36310,7 +36260,7 @@ Cartel
 stricto
 sensu
 obtiennent
-2_644_769
+2 644 769
 voix
 ,
 les
@@ -36319,14 +36269,14 @@ homogènes
 de
 la
 SFIO
-749_647
+749 647
 voix
 ,
 soit
 un
 total
 de
-3_394_416
+3 394 416
 suffrages
 pour
 les
@@ -38180,7 +38130,7 @@ il
 faut
 composer
 le
-02_31_30_47_70
+02 31 30 47 70
 
 En
 avril
@@ -41070,7 +41020,7 @@ Italiens
 sur
 plus
 de
-2_000
+2 000
 m²
 .
 
@@ -41970,7 +41920,8 @@ Missions
 ,
 t.
 IV
-1956
+,
+1856
 .
 
 Mais
@@ -42285,7 +42236,7 @@ Manche
 .
 
 Environ
-60500
+60 500
 de
 les
 personnes
@@ -42297,7 +42248,7 @@ yacht
 (
 de
 les
-149_900
+149 900
 dans
 la
 Nouvelle-Zélande
@@ -44320,7 +44271,7 @@ ne
 doit
 pas
 dépasser
-68_000
+68 000
 véhicules
 sinon
 les

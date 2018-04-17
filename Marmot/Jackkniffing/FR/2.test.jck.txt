@@ -1,75 +1,4 @@
 
-Les
-Guègues
-constituent
-un
-de
-les
-deux
-principaux
-groupes
-ethniques
-albanais
-,
-l'
-autre
-étant
-les
-Tosques
-.
-
-Démentie
-par
-Astana
-,
-l'
-information
-est
-cependant
-confirmée
-le
-lendemain
-par
-Lance
-Armstrong
-sur
-le
-site
-de
-sa
-fondation
-,
-avec
-pour
-objectif
-de
-gagner
-un
-huitième
-Tour
-de
-France
-et
-faire
-la
-promotion
-de
-sa
-fondation
-de
-lutte
-contre
-le
-cancer
-,
-mais
-sans
-préciser
-sa
-future
-équipe
-.
-
 En
 France
 ,
@@ -359,7 +288,7 @@ ne
 doit
 pas
 vraiment
-20_000
+20 000
 $
 à
 le
@@ -581,7 +510,7 @@ l'
 île
 Malouin
 pour
-24_000
+24 000
 $
 .
 
@@ -614,7 +543,7 @@ de
 7,4
 %
 (
-7_929
+7 929
 km²
 )
 de
@@ -818,7 +747,7 @@ The
 city
 .
 
---
+-
 LISBONNE
 (
 Dow
@@ -2947,7 +2876,7 @@ commune
 italienne
 d'
 environ
-5_800
+5 800
 habitants
 ,
 située
@@ -6474,12 +6403,60 @@ l'
 
 Bieber
 ajoute
+«
+As
+long
+you
+love
+me
+/
+I
+'ll
+be
+your
+platinum
+/
+I
+'ll
+be
+your
+silver
+/
+I
+'ll
+be
+your
+gold
+»
 ,
 ce
 qui
 signifie
 en
 français
+«
+Aussi
+longtemps
+que
+tu
+m'
+aimes
+/
+Je
+serais
+ton
+platine
+/
+Je
+serais
+ton
+argent
+/
+Je
+serais
+ton
+or
+»
 .
 
 À
@@ -6949,7 +6926,7 @@ et
 parcourant
 ainsi
 environ
-1_000
+1 000
 km
 sans
 aucune
@@ -9387,6 +9364,10 @@ le
 français
 .
 
+«
+Les
+Pourquoi
+?
 »
 passeront
 sur
@@ -10343,7 +10324,8 @@ yeux
 grâce
 à
 un
-savoir_faire
+savoir
+faire
 unique
 en
 matière
@@ -16520,7 +16502,7 @@ Le
 terme
 d'
 islamophobie
-recouvrir
+recouvre
 plusieurs
 significations
 .
@@ -18048,7 +18030,7 @@ propres
 missions
 .
 
---
+-
 Le
 salon
 est
@@ -20323,7 +20305,7 @@ N
 E
 et
 à
-2_560
+2 560
 m
 d'
 altitude
@@ -21393,7 +21375,7 @@ années
 1970
 ,
 environ
-25_000
+25 000
 enfants
 sont
 nés
@@ -21899,7 +21881,7 @@ saisi
 50
 caisses
 contenant
-500_000
+500 000
 cigarettes
 de
 contrebande
@@ -25705,7 +25687,7 @@ et
 attire
 plus
 de
-25_000
+25 000
 spectateurs
 .
 
@@ -30088,10 +30070,10 @@ en
 Engelbert
 Zaschka
 (
-à
 1er
 septembre
 1895
+à
 Fribourg-en-Brisgau
 ,
 Allemagne
@@ -30173,7 +30155,7 @@ Guérandaise
 mon
 épouse
 et
-moi_même
+moi-même
 avons
 été
 parfaitement
@@ -33050,7 +33032,7 @@ première
 était
 limitée
 à
-3_000
+3 000
 exemplaires
 »
 ,
@@ -35983,8 +35965,7 @@ de
 la
 Vrillière
 dont
-de
-les
+des
 caricatures
 ornent
 le
@@ -36011,7 +35992,7 @@ sur
 une
 distance
 de
-8_900
+8 900
 km
 .
 
@@ -37666,6 +37647,7 @@ les
 imprimantes
 (
 voir
+spooling
 )
 .
 
@@ -41297,6 +41279,8 @@ grâce
 un
 bond
 à
+7,23
+m
 établi
 à
 son
@@ -42507,7 +42491,14 @@ origine
 Elle
 est
 renommée
+Belgian
+Aviation
+School
 puis
+Sabena
+Air
+Training
+Center
 et
 s'
 installe
@@ -44637,7 +44628,7 @@ entretien
 sont
 estimés
 à
-520_000
+520 000
 euros
 sur
 4
@@ -45114,7 +45105,7 @@ Congo
 devant
 plus
 de
-10_000
+10 000
 personnes
 .
 

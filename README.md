@@ -1,7 +1,24 @@
 # TextAnnotation
 Couple of scripts used to generate automatique annotation for golden annotated CoNLL files using Jackknifing, Marmot parser for POS tags and Mate parser for syntactic annotations
 
+# Ref:
+        https://github.com/muelletm/cistern/blob/wiki/marmot.md
 
+        http://cistern.cis.lmu.de/marmot/
+
+## Marmot (FR as example)
+### Train annotation:
+1. python marmot.jackknife(10, 'FR')
+2. python marmot.creatBatchForMarmotJCK(10, Language)
+3. run the batch: Marmot/Jackkniffing/FR.postag.jck.batch.sh
+4. python marmot.mergeJckOutFiles()
+5. python marmot.integrateAutoPOS(jckMarmotFile, train file)
+
+### Test annotation:
+1. python marmot.getTrainModelCorpus()
+2. python marmot.getTestModelCorpus()
+3. run the batch : Marmot/FR.postag.batch.sh
+4. python marmot.integrateAutoPOS(marmotTestFile, test file)
 
 ### Dependencies
 

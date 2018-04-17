@@ -1,19 +1,21 @@
 import os
 
 
-def getTrainModelCorpus(filePath):
+def getTrainModelCorpus(filePath, lang):
     with open(filePath) as corpusFile:
         lines = corpusFile.readlines()
-        createMarmotTrainFile(lines, filePath + '.marmot.train')
+        path = '../Marmot/Train/train.conllu.marmot.train.{0}'.format(lang.lower())
+        createMarmotTrainFile(lines, path)
 
 
-def getTestModelCorpus(filePath):
+def getTestModelCorpus(filePath, lang):
     with open(filePath) as corpusFile:
         lines = corpusFile.readlines()
-        createMarmotTestFile(lines, '/Users/halsaied/Downloads/MarMot/test.marmot.hu')
+        path = '../Marmot/Input/test.marmot.{1}'.format(lang, lang.lower())
+        createMarmotTestFile(lines, path)
 
 
-def evaluateMarMot(testOutEvalFile, sharedTaskTestConlluFile):
+def evaluateMarmot(testOutEvalFile, sharedTaskTestConlluFile):
     with open(testOutEvalFile) as testOutEvalFile:
         testOutEvallines = testOutEvalFile.readlines()
         with open(sharedTaskTestConlluFile) as sharedTaskTestConlluFile:
@@ -40,7 +42,7 @@ def evaluateMarMot(testOutEvalFile, sharedTaskTestConlluFile):
 
                 idx = 0
                 result = ''
-                for newlinePart in newLineParts:
+                for i in range(len(newLineParts)):
                     if idx == 4:
                         result += str(lineParts[3])
                     else:
@@ -51,7 +53,7 @@ def evaluateMarMot(testOutEvalFile, sharedTaskTestConlluFile):
                 finalResult += result
                 lineIdx += 1
 
-            marmotTestFile = open('/Users/halsaied/Downloads/MarMot/test.gold.eval.pl', 'w+')
+            marmotTestFile = open('/Users/halsaied/Downloads/Marmot/test.gold.eval.pl', 'w+')
             marmotTestFile.write(finalResult)
 
 
@@ -61,7 +63,6 @@ def integrateAutoPOS(conlluFilePath, marmotOutFilePath):
         with open(marmotOutFilePath) as marmotOutFilePath:
             marmotTestOutLines = marmotOutFilePath.readlines()
             lineIdx = 0
-
             finalResult = ''
             # iterating over test conllu file
             for line in lines:
@@ -82,7 +83,7 @@ def integrateAutoPOS(conlluFilePath, marmotOutFilePath):
 
                 idx = 0
                 result = ''
-                for linePart in lineParts:
+                for i in range(len(lineParts)):
                     if idx == 3:
                         result += str(marmotTestOutLineParts[5])
                     else:
@@ -98,12 +99,14 @@ def integrateAutoPOS(conlluFilePath, marmotOutFilePath):
 
 
 def jackknife(foldNum, langName):
-    corpusPath = os.path.join('/Users/halsaied/Documents/IdenSys/sharedTask/', langName, 'train.conllu')
+    corpusPath = os.path.join('/Users/halsaied/PycharmProjects/TextAnnotation/sharedTask/', langName, 'train.conllu')
     with open(corpusPath) as corpusFile:
         lines = corpusFile.readlines()
         foldSize = len(lines) / foldNum
 
-        ResultPath = os.path.join('/Users/halsaied/Documents/IdenSys/MarMot/Jackkniffing/', langName)
+        ResultPath = os.path.join('/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Jackkniffing/', langName)
+        if not os.path.exists(ResultPath):
+            os.makedirs(ResultPath)
         for i in xrange(0, foldNum):
 
             trainPath = os.path.join(ResultPath, str(i) + '.train.jck.txt')
@@ -168,7 +171,7 @@ def createMarmotTestFile(lines, testFilepath):
 
         trainCorpus += lineParts[1] + '\n'
 
-    marmotTestFile = open(testFilepath, 'w+')
+    marmotTestFile = open(testFilepath, 'w')
     marmotTestFile.write(trainCorpus)
 
 
@@ -194,9 +197,9 @@ def approximateCuttingIdx(cuttingIdx, lines):
 
 
 def creatBatchForMarmotJCK(foldNum, langList):
-    batch = '#!/bin/bash\n'
-    jckPath = '/Users/halsaied/Documents/IdenSys/MarMot/Jackkniffing/'
     for lang in langList.split(','):
+        batch = '#!/bin/bash\n'
+        jckPath = '/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Jackkniffing/'
         for f in xrange(0, foldNum):
             trainFile = os.path.join(jckPath, lang, str(f) + '.train.jck.txt')
             modelFile = os.path.join(jckPath, lang, str(f) + '.model.jck.txt')
@@ -205,8 +208,8 @@ def creatBatchForMarmotJCK(foldNum, langList):
             outputFile = os.path.join(jckPath, lang, str(f) + '.output.jck.txt')
             batch += 'java -cp marmot.jar marmot.morph.cmd.Annotator --model-file ' + modelFile + ' --test-file form-index=0,' + testFile + ' --pred-file ' + outputFile + '\n'
 
-    batchFile = open(jckPath + 'postag.jck.batch.sh', 'w+')
-    batchFile.write(batch)
+        batchFile = open(jckPath + '{0}.postag.jck.batch.sh'.format(lang), 'w')
+        batchFile.write(batch)
 
 
 def mergeJckOutFiles(outfilesPath, foldNum, langs):
@@ -215,10 +218,10 @@ def mergeJckOutFiles(outfilesPath, foldNum, langs):
         for subdir, dirs, files in os.walk(os.path.join(outfilesPath, lang)):
             for fileIdx in xrange(0, foldNum):
                 fileFounded = False
-                for file in files:
-                    if file == str(fileIdx) + '.output.jck.txt':
+                for f in files:
+                    if f == str(fileIdx) + '.output.jck.txt':
                         fileFounded = True
-                        with open(os.path.join(outfilesPath, lang, file)) as jckOutFile:
+                        with open(os.path.join(outfilesPath, lang, f)) as jckOutFile:
                             jckOutLines = jckOutFile.readlines()
                             jckOutLines = removeFinalEmptyLines(jckOutLines)
                             for line in jckOutLines:
@@ -270,11 +273,15 @@ def verifyAlignment(path1, path2):
     return True
 
 
-# creatBatchForMarmotJCK(10, 'FR,HU,CS,PL')
-# mergeJckOutFiles('/Users/halsaied/Documents/IdenSys/MarMot/Jackkniffing/', 10, 'FR')
+#getTrainModelCorpus('/Users/halsaied/PycharmProjects/TextAnnotation/SharedTask/HU/train.conllu', 'HU')
+# getTestModelCorpus('/Users/halsaied/PycharmProjects/TextAnnotation/SharedTask/PL/test.conllu', 'PL')
 
-# integrateAutoPOS('/Users/halsaied/Documents/IdenSys/sharedtask/FR/test.conllu', '/Users/halsaied/Documents/IdenSys/MarMot/Output/test.out.fr')
+# creatBatchForMarmotJCK(10, 'FR')
+#mergeJckOutFiles('/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Jackkniffing/', 10, 'FR')
+integrateAutoPOS('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/train.conllu', '/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Jackkniffing/FR/out.jck.txt')
+#integrateAutoPOS('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/test.conllu', '/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Output/test.out.fr')
 
-# print verifyAlignment('/Users/halsaied/Documents/IdenSys/sharedtask/HU/train.conllu', '/Users/halsaied/Documents/IdenSys/sharedtask/HU/train.conllu.autoPOS')
+# print verifyAlignment('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu', '/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu.autoPOS')
 
-mergeJckOutFiles('/Users/halsaied/Documents/IdenSys/MateTools/HU/Jackkniffing/', 10, '')
+# jackknife(10, 'FR')
+# mergeJckOutFiles('/Users/halsaied/PycharmProjects/TextAnnotation/Mate/HU/Jackkniffing/', 10, '')

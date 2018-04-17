@@ -3759,7 +3759,7 @@ la
 catégorie
 «
 race
-record
+records
 »
 .
 
@@ -6045,7 +6045,7 @@ son
 côté
 précisé
 que
-2_000
+2 000
 militaires
 avaient
 été
@@ -6521,7 +6521,8 @@ vivacité
 d'
 esprit
 )
-qu'Etty
+qu'
+Etty
 lisait
 et
 parlait
@@ -7039,7 +7040,7 @@ D'
 une
 longueur
 de
-1_200
+1 200
 kilomètres
 ,
 le
@@ -7531,9 +7532,9 @@ excès
 de
 masse
 de
-35_443_677
+35 443 677
 ±
-2_036
+2 036
 eV/c2
 et
 une
@@ -7542,9 +7543,9 @@ de
 liaison
 nucléaire
 de
-1_766_691_409
+1 766 691 409
 ±
-2_061
+2 061
 eV
 .
 
@@ -8112,7 +8113,7 @@ pertes
 se
 montant
 à
-4_500
+4 500
 morts
 ou
 blessés
@@ -8123,7 +8124,7 @@ pertes
 anglo-portugaises
 d'
 environ
-1_250
+1 250
 hommes
 .
 
@@ -9166,7 +9167,7 @@ ville
 était
 estimée
 à
-228_645
+228 645
 habitants
 .
 
@@ -10337,7 +10338,7 @@ et
 Melilla
 .
 
---
+-
 Elle
 lui
 dit
@@ -12134,7 +12135,7 @@ en
 et
 qui
 comprend
-30_000
+30 000
 vers
 .
 
@@ -12708,7 +12709,7 @@ en
 La
 section
 comprenait
-1_100
+1 100
 citoyens
 actifs
 .
@@ -18185,7 +18186,7 @@ la
 plus
 vendue
 (
-385_521
+385 521
 clients
 )
 .
@@ -18413,7 +18414,7 @@ Sa
 population
 est
 de
-35_709
+35 709
 habitants
 .
 
@@ -19429,6 +19430,7 @@ lune
 jovienne
 Io
 avec
+1 500
 mètres
 de
 hauteur
@@ -22438,7 +22440,7 @@ groupe
 Canal
 +
 ,
-lui_même
+lui-même
 filiale
 de
 le
@@ -23748,7 +23750,7 @@ réponse
 pour
 les
 composés
-di-
+di
 -
 et
 tri
@@ -23965,7 +23967,7 @@ a
 été
 estimé
 à
-147_000
+147 000
 .
 
 Le
@@ -25652,7 +25654,7 @@ rocailles
 fleuries
 jusqu'
 à
-2_500
+2 500
 m
 .
 
@@ -30264,7 +30266,7 @@ souveraineté
 française
 .
 
---
+-
 Comment
 vaincre
 la
@@ -35483,7 +35485,7 @@ collection
 de
 plus
 de
-2_000
+2 000
 enregistrements
 d'
 entrevues
@@ -36999,7 +37001,7 @@ niveau
 "
 pour
 les
-35_000
+35 000
 salariés
 de
 la
@@ -39458,7 +39460,7 @@ se
 rencontre
 jusqu'
 à
-1_500
+1 500
 m
 d'
 altitude
@@ -40785,7 +40787,7 @@ Crozzon
 di
 Brenta
 (
-3_135
+3 135
 m
 )
 avec
@@ -41557,7 +41559,7 @@ perçoit
 un
 bonus
 de
-925_000
+925 000
 dollars
 à
 la
@@ -42985,7 +42987,7 @@ le
 Haut-Anjou
 ,
 à
-1_000
+1 000
 m
 à
 le
