@@ -37,43 +37,46 @@ def ConlluToConll2009(conllu2016Path):
         mateFile.write(Conll2009Text)
 
 
-def conllu2009Toconllu(conllu2009Path, Conll2016Path):
-    with open(conllu2009Path) as Conll2009File:
-        lines9 = Conll2009File.readlines()
-
-        with open(Conll2016Path) as Conll2016File:
-            lines16 = Conll2016File.readlines()
-
+def conllu2009Toconllu(autoDep2009, conllFile, autoPos2016, desConll2016Path):
+    with open(autoPos2016, 'r') as autoPos2016File:
+        autoPOSLines = autoPos2016File.readlines()
+        with open(autoDep2009, 'r') as autoDepFile:
+            lines9 = autoDepFile.readlines()
+            with open(conllFile, 'r') as Conll2016File:
+                lines2016 = Conll2016File.readlines()
             Conll2016Text = ''
-            idx = 0
-            for line in lines16:
+            autoPosIdx, idx = 0, 0
+            for line in lines2016:
                 if len(line) > 0 and line.endswith('\n'):
                     line = line[:-1]
-                if line.startswith('#'):
+                if line.startswith('#'): #or (line.split('\t') and '-' in line.split('\t')[0])
+                    autoPosIdx += 1
                     Conll2016Text += line + '\n'
                     continue
-                if line == '':
+                if not line.strip():
                     idx += 1
+                    autoPosIdx += 1
                     Conll2016Text += line + '\n'
                     continue
-
                 lineParts16 = line.split('\t')
-                lineParts09 = lines9[idx].split('\t')
-
-                if '-' in lineParts16[0]:
+                if lineParts16[0].find('-') != -1:
+                    Conll2016Text += line + '\n'
                     continue
-
+                lineParts09 = lines9[idx].split('\t')
+                autoPOSLineParts = autoPOSLines[autoPosIdx].split('\t')
+                line16 = '{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n'.format(
+                    lineParts16[0],lineParts16[1],lineParts16[2],autoPOSLineParts[3],autoPOSLineParts[4],
+                    lineParts16[5],lineParts09[9],lineParts09[11],lineParts16[8],lineParts16[9])
                 idx += 1
-                lineParts16[6] = lineParts09[9]
-                lineParts16[7] = lineParts09[11]
-                line = ''
-                for linePart in lineParts16:
-                    line += linePart + '\t'
-                line = line[:-1] + '\n'
-                Conll2016Text += line
+                autoPosIdx += 1
+                # line = ''
+                # for linePart in lineParts16:
+                #     line += linePart + '\t'
+                # line = line[:-1] + '\n'
+                Conll2016Text += line16
 
-            mateFile = open(Conll2016Path + '.autoDep', 'w+')
-            mateFile.write(Conll2016Text)
+    mateFile = open(desConll2016Path , 'w+')
+    mateFile.write(Conll2016Text)
 
 
 def jackknife(foldNum, langName):
@@ -117,8 +120,8 @@ def createMateFile(lines, path):
 def createMateBatchJCK(foldNum, langList):
     batch = '#!/bin/bash\n'
     outPutPath = '/Users/halsaied/PycharmProjects/TextAnnotation/Mate/srl/lib/'
-    jackPath = '/Users/halsaied/PycharmProjects/TextAnnotation/Mate/HU/Jackkniffing/'
     for lang in langList.split(','):
+        jackPath = '/Users/halsaied/PycharmProjects/TextAnnotation/Mate/{0}/Jackkniffing/'.format(lang)
         for f in xrange(0, foldNum):
             trainFile = os.path.join(jackPath, str(f) + '.train.jck.txt')
             modelFile = os.path.join(jackPath, str(f) + '.model.jck.txt')
@@ -127,29 +130,36 @@ def createMateBatchJCK(foldNum, langList):
             outputFile = os.path.join(jackPath, str(f) + '.output.jck.txt')
             batch += 'java -cp anna-3.3.jar is2.parser.Parser -model ' + modelFile + ' -test ' + testFile + ' -out ' + outputFile + '\n'
 
-    batchFile = open(outPutPath + 'dep.jck.batch.sh', 'w+')
-    batchFile.write(batch)
+        batchFile = open(outPutPath + '{0}.dep.jck.batch.sh'.format(lang), 'w+')
+        batchFile.write(batch)
+
+#
+# def mergeConlluFiles(outfilesPath, outputFileName):
+#     lines = ''
+#     for subdir, dirs, files in os.walk(outfilesPath):
+#         for file in files:
+#             with open(os.path.join(outfilesPath, file)) as conlluFile:
+#                 jckOutLines = conlluFile.readlines()
+#                 jckOutLines = marmot.removeFinalEmptyLines(jckOutLines)
+#                 for line in jckOutLines:
+#                     lines += line
+#     outFile = open(os.path.join(outfilesPath, outputFileName), 'w')
+#     outFile.write(lines)
 
 
-def mergeConlluFiles(outfilesPath, outputFileName):
-    lines = ''
-    for subdir, dirs, files in os.walk(outfilesPath):
-        for file in files:
-            with open(os.path.join(outfilesPath, file)) as conlluFile:
-                jckOutLines = conlluFile.readlines()
-                jckOutLines = marmot.removeFinalEmptyLines(jckOutLines)
-                for line in jckOutLines:
-                    lines += line
-    outFile = open(os.path.join(outfilesPath, outputFileName), 'w')
-    outFile.write(lines)
-
-
-# ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu.autoPOS')
-# jackknife(10, 'HU')
-# createMateBatchJCK(10, 'HU')
+#ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/train.conllu.autoPOS')
+#jackknife(10, 'FR')
+#createMateBatchJCK(10, 'FR')
 # conllu2009Toconllu('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu.autoPOS.conllu2009', '/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu.autoPOS')
 # ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/test.conllu.autoPOS')
 
+#ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/test.conllu.autoPOS')
 # mergeConlluFiles('/Users/halsaied/PycharmProjects/TextAnnotation/mateTools/SPMRL/','spmrl.conllu')
-ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/train.conllu')
-ConlluToConll2009('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/test.conllu')
+
+#for filename in os.listdir('../MateJackkniffing/FR/'):
+    #if filename.endswith('output.jck.txt'):
+if __name__ == '__main__':
+    conllu2009Toconllu('/Users/halsaied/PycharmProjects/TextAnnotation/Mate/Jackkniffing/FR/train.conll.2009.jck.autoDep.txt',
+                   '/Users/halsaied/PycharmProjects/TextAnnotation/SharedTask/FR/train.conllu',
+                       '/Users/halsaied/PycharmProjects/TextAnnotation/SharedTask/FR/train.conllu.autoPOS',
+                    '/Users/halsaied/PycharmProjects/TextAnnotation/SharedTask/FR/train.conllu.autoPOS.autoDep')

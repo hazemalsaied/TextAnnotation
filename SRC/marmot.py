@@ -229,7 +229,7 @@ def mergeJckOutFiles(outfilesPath, foldNum, langs):
                 if not fileFounded:
                     print 'Output File is not existing: '
                 fileIdx += 1
-        outFile = open(os.path.join(outfilesPath, lang, 'out.jck.txt'), 'w')
+        outFile = open(os.path.join(outfilesPath, lang, 'train.conll.2009.jck.autoDep.txt'), 'w')
         outFile.write(lines)
 
 
@@ -278,10 +278,12 @@ def verifyAlignment(path1, path2):
 
 # creatBatchForMarmotJCK(10, 'FR')
 #mergeJckOutFiles('/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Jackkniffing/', 10, 'FR')
-integrateAutoPOS('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/train.conllu', '/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Jackkniffing/FR/out.jck.txt')
+#integrateAutoPOS('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/train.conllu', '/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Jackkniffing/FR/out.jck.txt')
 #integrateAutoPOS('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/FR/test.conllu', '/Users/halsaied/PycharmProjects/TextAnnotation/Marmot/Output/test.out.fr')
 
 # print verifyAlignment('/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu', '/Users/halsaied/PycharmProjects/TextAnnotation/sharedtask/HU/train.conllu.autoPOS')
 
 # jackknife(10, 'FR')
 # mergeJckOutFiles('/Users/halsaied/PycharmProjects/TextAnnotation/Mate/HU/Jackkniffing/', 10, '')
+if __name__ == '__main__':
+    mergeJckOutFiles('/Users/halsaied/PycharmProjects/TextAnnotation/Mate/Jackkniffing/', 10, 'FR')
