@@ -20,6 +20,23 @@ Couple of scripts used to generate automatique annotation for golden annotated C
 3. run the batch : Marmot/FR.postag.batch.sh
 4. python marmot.integrateAutoPOS(marmotTestFile, test file)
 
+
+## Mate (FR as example)
+### Train annotation:
+1. python mate.ConlluToConll2009
+2. python mate.jackknife
+3. python marmot.creatBatch
+4. run the batch: Mate/xp.sh
+5. python marmot.mergeJckOutFiles
+6. python marmot.conllu2009Toconllu
+
+### Test annotation:
+1. python mate.ConlluToConll2009
+2. run the batch : Mate/xp.sh
+3. python marmot.conllu2009Toconllu
+
+
+
 ### Dependencies
 
 1- Convert the current conllu train file into conllu 2009
